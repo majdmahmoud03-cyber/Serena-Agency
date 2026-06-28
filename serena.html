@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعة سيرينا | وكالة سيرينا للتوظيف والاستثمار</title>
+    <meta name="description" content="وكالة Serena للتوظيف والاستثمار - جزء من مجموعة سيرينا - حلول متكاملة للأفراد والشركات والمستثمرين منذ عام 2000">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                        secondary: { 50: '#fdf4ff', 500: '#d946ef', 600: '#c026d3', 900: '#701a75' },
+                        dark: { 800: '#111827', 900: '#030712' }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Premium Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            background-color: #080c14; 
+            font-family: 'Cairo', sans-serif;
+        }
+        .hero-grid {
+            background-image: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 80%);
+        }
+        .glass-card { 
+            background: rgba(17, 24, 39, 0.7); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+        }
+        .text-gradient-premium { 
+            background: linear-gradient(135deg, #60a5fa, #a78bfa); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+        }
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+    </style>
+</head>
+<body class="text-slate-100 overflow-x-hidden selection:bg-blue-600 selection:text-white">
+
+    <!-- ====== HEADER / NAVIGATION ====== -->
+    <nav class="sticky top-0 w-full bg-[#080c14]/90 backdrop-blur-md z-50 border-b border-slate-800/80">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-briefcase text-white text-xl"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black text-white tracking-wide group-hover:text-blue-400 transition-colors">SERENA</span>
+                    <span class="text-[10px] text-slate-400 font-medium tracking-widest uppercase">GROUP • سيرينا</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex gap-8 items-center text-sm font-semibold text-slate-300">
+                <a href="#about" class="hover:text-white transition">عن المجموعة</a>
+                <a href="#services" class="hover:text-white transition">الخدمات</a>
+                <a href="#how-it-works" class="hover:text-white transition">كيف نعمل</a>
+                <a href="#sectors" class="hover:text-white transition">القطاعات</a>
+                <a href="#contact" class="px-5 py-2.5 bg-blue-600/15 text-blue-400 border border-blue-500/30 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">تواصل معنا</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white transition">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#090d16] border-b border-slate-800 px-4 py-6 space-y-4">
+            <a href="#about" class="block px-4 py-2 text-slate-300 hover:text-white transition">عن المجموعة</a>
+            <a href="#services" class="block px-4 py-2 text-slate-300 hover:text-white transition">الخدمات</a>
+            <a href="#how-it-works" class="block px-4 py-2 text-slate-300 hover:text-white transition">كيف نعمل</a>
+            <a href="#sectors" class="block px-4 py-2 text-slate-300 hover:text-white transition">القطاعات</a>
+            <a href="#contact" class="block text-center py-2.5 bg-blue-600 text-white font-bold rounded-xl transition">تواصل مباشر</a>
+        </div>
+    </nav>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section class="relative min-h-[85vh] flex flex-col justify-center overflow-hidden py-16 sm:py-24 hero-grid">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400 text-xs sm:text-sm font-semibold mb-8">
+                <i class="fas fa-sparkles"></i>
+                <span>مجموعة سيرينا • عراقة وتميز مهني منذ عام 2000</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight max-w-4xl mx-auto mb-8">
+                بوابة الفرص للتوظيف و<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-200">الاستثمار الذكي</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg lg:text-xl text-slate-300/90 max-w-2xl mx-auto mb-12 leading-relaxed">
+                نربط بكفاءة متناهية بين المواهب والفرص الوظيفية المرموقة، لنصنع معاً قصة نجاح مهنية مستدامة تعتمد على الشفافية والثقة المتبادلة.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto mb-16">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl shadow-lg hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap">
+                    <span>اتصل بنا الآن</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-bold rounded-xl transition duration-300">
+                    استكشف الخدمات
+                </a>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl mx-auto p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md">
+                <div>
+                    <div class="text-2xl sm:text-4xl font-extrabold text-blue-400 mb-1">35,000+</div>
+                    <div class="text-xs sm:text-sm text-slate-400">موظف وكفاءة مسجلة</div>
+                </div>
+                <div class="border-r border-slate-800">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-indigo-400 mb-1">26+</div>
+                    <div class="text-xs sm:text-sm text-slate-400">سنة من ريادة الأعمال</div>
+                </div>
+                <div class="border-r border-slate-800">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-blue-400 mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-400">موثوقية وأمان قانوني</div>
+                </div>
+                <div class="border-r border-slate-800">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-emerald-400 mb-1">24/7</div>
+                    <div class="text-xs sm:text-sm text-slate-400">دعم واستشارات مستمرة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT SERENA GROUP ====== -->
+    <section id="about" class="py-24 bg-[#090d16] border-y border-slate-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-full lg:w-5/12 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-500/10 text-indigo-400 text-xs font-bold">
+                        <i class="fas fa-award"></i>
+                        <span>الريادة والتميز</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+                        مجموعة سيرينا <br />
+                        <span class="text-gradient-premium">تكامل استراتيجي عابر للحدود</span>
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed text-base">
+                        تأسست مجموعة سيرينا لتكون النواة الأساسية لبناء استثمارات مستدامة وحلول متكاملة عبر تخديم كبرى القطاعات الحيوية، متبنين أعلى معايير الشفافية والمهنية المطلقة.
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400 mt-1 shrink-0">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base">ترخيص رسمي معتمد</h4>
+                                <p class="text-slate-400 text-sm">نعمل بشكل قانوني كامل لتوفير الأمان وحفظ حقوق كافة المتعاملين معنا.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 mt-1 shrink-0">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-base">شبكة فروع ممتدة</h4>
+                                <p class="text-slate-400 text-sm">تنسيق دائم عبر مكاتبنا الإقليمية لتسريع عجلة التوظيف والاستثمار.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-5">
+                            <i class="fas fa-microphone-lines text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">الإعلام والاتصالات</h3>
+                        <p class="text-slate-400 text-sm">إدارة منصات وتوعية إعلامية رائدة وحملات تسويقية وتثقيفية ممتازة.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-5">
+                            <i class="fas fa-ship text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">النقل والخدمات اللوجستية</h3>
+                        <p class="text-slate-400 text-sm">إدارة الشحن اللوجستي البري والبحري وحلول سلاسل الإمداد المتطورة.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5">
+                            <i class="fas fa-gavel text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">الاستشارات والحلول القانونية</h3>
+                        <p class="text-slate-400 text-sm">تأمين حماية وموثوقية المعاملات والعقود ومطابقتها للقوانين النافذة.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-5">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">التعليم والتطوير</h3>
+                        <p class="text-slate-400 text-sm">برامج متميزة ومبتكرة لتأهيل الكوادر البشرية وتحضيرها لسوق العمل.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section id="services" class="py-24 bg-gradient-to-b from-[#080c14] to-[#0a0f1b]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-blue-500 bg-blue-500/10 px-4 py-1.5 rounded-full inline-block mb-4">خدمات وكالة سيرينا للتوظيف</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mb-4">خدمات متميزة للجميع</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Individuals -->
+                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-blue-600/10 text-blue-400 flex items-center justify-center mb-6">
+                            <i class="fas fa-user-tie text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">للأفراد</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">نساعدك على صياغة ملف مهني متميز وربطك مباشرة بجهات التوظيف الأنسب لمجالك.</p>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li><i class="fas fa-circle-check text-blue-500 ml-2"></i> مقابلات عمل حقيقية</li>
+                            <li><i class="fas fa-circle-check text-blue-500 ml-2"></i> تطوير السيرة الذاتية</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="py-3 text-center bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-sm transition">سجل كباحث عن عمل</a>
+                </div>
+
+                <!-- Companies -->
+                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-6">
+                            <i class="fas fa-building text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">للشركات</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">نوفر الكوادر البشرية المؤهلة بدقة وبسرعة لتغذية أقسام مؤسستكم وتسهيل أعمالكم.</p>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li><i class="fas fa-circle-check text-indigo-500 ml-2"></i> اختبار وتصفية دقيقة للمرشحين</li>
+                            <li><i class="fas fa-circle-check text-indigo-500 ml-2"></i> حلول عقود وظيفية قانونية</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="py-3 text-center bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-sm transition">اطلب كادراً الآن</a>
+                </div>
+
+                <!-- Investors -->
+                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-600/10 text-emerald-400 flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">للمستثمرين</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">نوفر فرصاً استثمارية واعدة ومدروسة بالكامل بجدوى حقيقية وعوائد مالية آمنة.</p>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li><i class="fas fa-circle-check text-emerald-500 ml-2"></i> دراسات جدوى شاملة</li>
+                            <li><i class="fas fa-circle-check text-emerald-500 ml-2"></i> إدارة مخاطر استثمارية</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="py-3 text-center bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-sm transition">استشر خبيراً استثمارياً</a>
+                </div>
+            </div>
+
+            <!-- Study Abroad Card -->
+            <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-slate-900 to-indigo-950/40 border border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-indigo-400 bg-indigo-400/10 px-2 py-0.5 rounded font-bold uppercase">قريباً</span>
+                        <h4 class="text-lg font-bold text-white">خدمة الدراسة والتدريب بالخارج</h4>
+                        <p class="text-slate-400 text-sm">تأمين قبولات ومنح جامعية وتدريبية في كبرى المؤسسات التعليمية الدولية.</p>
+                    </div>
+                </div>
+                <span class="px-4 py-1.5 bg-slate-900 text-slate-500 text-xs font-bold rounded-full border border-slate-800">قريباً جداً</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== HOW WE WORK ====== -->
+    <section id="how-it-works" class="py-24 bg-[#070b13]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">آلية تقديم وطلب الكوادر</h2>
+                <p class="text-slate-400 text-sm">خطوات واضحة وبسيطة لضمان الموثوقية</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-blue-600/10 text-blue-400 border border-blue-500/30 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">1</div>
+                    <h3 class="text-xl font-bold text-white mb-2">تقديم الطلب</h3>
+                    <p class="text-slate-400 text-sm">تواصل معنا وقدم المستندات المطلوبة أو حدد مواصفات الكفاءة المرجوة.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-indigo-600/20">2</div>
+                    <h3 class="text-xl font-bold text-white mb-2">الدراسة والتطابق</h3>
+                    <p class="text-slate-400 text-sm">يقوم خبراؤنا بفرز ومطابقة العروض والطلبات لتأمين النتيجة الأمثل.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-emerald-600/20">3</div>
+                    <h3 class="text-xl font-bold text-white mb-2">المقابلة والمباشرة</h3>
+                    <p class="text-slate-400 text-sm">تنسيق لقاء مباشر وصياغة العقود الرسمية لبدء شراكة ناجحة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SECTORS ====== -->
+    <section id="sectors" class="py-20 bg-slate-900/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-6xl mx-auto">
+                <div class="w-full lg:w-5/12">
+                    <h2 class="text-3xl font-black text-white mb-4">قطاعات نعمل بها وتغطيها خدماتنا</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">خبرات متراكمة في مجالات الفنادق، البناء والتشييد، الرعاية الطبية، الخدمات الهندسية، الإدارة والمالية.</p>
+                </div>
+                <div class="w-full lg:w-7/12 flex flex-wrap gap-3 lg:justify-end">
+                    <span class="px-4 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-slate-300 font-bold text-xs sm:text-sm"><i class="fas fa-hotel text-blue-500 ml-1.5"></i> السياحة والفنادق</span>
+                    <span class="px-4 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-slate-300 font-bold text-xs sm:text-sm"><i class="fas fa-hammer text-blue-500 ml-1.5"></i> المقاولات والبناء</span>
+                    <span class="px-4 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-slate-300 font-bold text-xs sm:text-sm"><i class="fas fa-stethoscope text-blue-500 ml-1.5"></i> القطاع الطبي والصحي</span>
+                    <span class="px-4 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-slate-300 font-bold text-xs sm:text-sm"><i class="fas fa-code text-blue-500 ml-1.5"></i> البرمجة والتكنولوجيا</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT / OFFICE HUB (UPDATED TO REMOVE CHANNELS AND DIRECTLY LINK TO WHATSAPP) ====== -->
+    <section id="contact" class="py-24 bg-gradient-to-b from-[#0a0f1b] to-[#080c14] relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-400/10 px-4 py-1.5 rounded-full inline-block mb-4">تواصل معنا بشكل مباشر وحقيقي</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mb-4">العناوين وأرقام التواصل الرسمية</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 text-sm">انقر على زر الواتساب لإجراء محادثة مباشرة مع الرقم، أو استخدم زر الاتصال لتشغيل الهاتف.</p>
+            </div>
+
+            <!-- Tab Selectors for Contacts -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-12 max-w-2xl mx-auto">
+                <button data-tab="all" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-blue-600 text-white shadow-lg shadow-blue-600/20 transition">عرض الكل</button>
+                <button data-tab="syria" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-900 text-slate-400 border border-slate-800 hover:text-white transition">مكاتب سوريا 🇸🇾</button>
+                <button data-tab="intl" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-900 text-slate-400 border border-slate-800 hover:text-white transition">المكاتب الدولية 🌍</button>
+                <button data-tab="management" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-900 text-slate-400 border border-slate-800 hover:text-white transition">أرقام مدراء الأقسام 👑</button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Offices List (Left) -->
+                <div class="lg:col-span-8 space-y-6">
+                    
+                    <!-- Latakia -->
+                    <div data-category="syria" class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-[#080c14] border border-slate-800">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 text-xs font-bold text-blue-400 bg-blue-500/10 rounded-full">مكتب اللاذقية (المقر الرئيسي)</span>
+                            <span class="text-xs font-mono text-slate-500">Latakia</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300 text-sm mb-5">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-1"></i>
+                            <div>
+                                <p class="font-bold">المشروع العاشر - طريق المدينة الرياضية</p>
+                                <p class="text-xs text-slate-500 font-mono">Project 10 - Sport's City Rd</p>
+                            </div>
+                        </div>
+
+                        <!-- Landlines -->
+                        <div class="space-y-2 mb-5 pt-3 border-t border-slate-800/60">
+                            <span class="text-xs text-slate-500 block font-semibold">الهواتف الأرضية (انقر للاتصال):</span>
+                            <div class="flex flex-wrap gap-2">
+                                <div class="flex items-center gap-1.5 bg-slate-800/40 hover:bg-slate-800 border border-slate-800 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono text-slate-300 transition">
+                                    <i class="fas fa-phone text-slate-500"></i>
+                                    <a href="tel:+963172310151">017-2310151</a>
+                                    <button onclick="copyToClipboard('017-2310151', 'c-lat1')" id="c-lat1" class="mr-2 text-slate-500 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-slate-800/40 hover:bg-slate-800 border border-slate-800 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono text-slate-300 transition">
+                                    <i class="fas fa-phone text-slate-500"></i>
+                                    <a href="tel:+963172338777">017-2338777</a>
+                                    <button onclick="copyToClipboard('017-2338777', 'c-lat2')" id="c-lat2" class="mr-2 text-slate-500 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Connection -->
+                        <div class="pt-3 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-3">
+                            <div>
+                                <span class="text-xs text-slate-500 block font-semibold mb-1">رقم الجوال والواتساب المباشر:</span>
+                                <span class="font-mono text-slate-200 text-sm font-bold bg-slate-800/30 px-3 py-1.5 rounded-lg">+963 940 165 008</span>
+                            </div>
+                            <a href="https://wa.me/963940165008" target="_blank" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl flex items-center gap-2"><i class="fab fa-whatsapp"></i> محادثة واتساب فورية</a>
+                        </div>
+                    </div>
+
+                    <!-- Damascus -->
+                    <div data-category="syria" class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-[#080c14] border border-slate-800">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 text-xs font-bold text-blue-400 bg-blue-500/10 rounded-full">مكتب دمشق</span>
+                            <span class="text-xs font-mono text-slate-500">Damascus</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300 text-sm mb-5">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-1"></i>
+                            <div>
+                                <p class="font-bold">مشروع دمر - جزيرة 4 - بناء 3</p>
+                                <p class="text-xs text-slate-500 font-mono">Dumar Project - Blk 4 Bld 3</p>
+                            </div>
+                        </div>
+
+                        <!-- Landlines -->
+                        <div class="space-y-2 mb-5 pt-3 border-t border-slate-800/60">
+                            <span class="text-xs text-slate-500 block font-semibold">الهواتف الأرضية (انقر للاتصال):</span>
+                            <div class="flex flex-wrap gap-2">
+                                <div class="flex items-center gap-1.5 bg-slate-800/40 hover:bg-slate-800 border border-slate-800 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono text-slate-300 transition">
+                                    <i class="fas fa-phone text-slate-500"></i>
+                                    <a href="tel:+963113119676">011-3119676</a>
+                                    <button onclick="copyToClipboard('011-3119676', 'c-dam1')" id="c-dam1" class="mr-2 text-slate-500 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-slate-800/40 hover:bg-slate-800 border border-slate-800 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono text-slate-300 transition">
+                                    <i class="fas fa-phone text-slate-500"></i>
+                                    <a href="tel:+963113164449">011-3164449</a>
+                                    <button onclick="copyToClipboard('011-3164449', 'c-dam2')" id="c-dam2" class="mr-2 text-slate-500 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Connection -->
+                        <div class="pt-3 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-3">
+                            <div>
+                                <span class="text-xs text-slate-500 block font-semibold mb-1">رقم الجوال والواتساب المباشر:</span>
+                                <span class="font-mono text-slate-200 text-sm font-bold bg-slate-800/30 px-3 py-1.5 rounded-lg">+963 994 692 888</span>
+                            </div>
+                            <a href="https://wa.me/963994692888" target="_blank" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl flex items-center gap-2"><i class="fab fa-whatsapp"></i> محادثة واتساب فورية</a>
+                        </div>
+                    </div>
+
+                    <!-- Homs -->
+                    <div data-category="syria" class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-[#080c14] border border-slate-800">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 text-xs font-bold text-blue-400 bg-blue-500/10 rounded-full">مكتب حمص</span>
+                            <span class="text-xs font-mono text-slate-500">Homs</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300 text-sm mb-5">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-1"></i>
+                            <div>
+                                <p class="font-bold">شارع الحضارة - مقابل شركة MTN</p>
+                                <p class="text-xs text-slate-500 font-mono">Al_Hadara Street - opposite MTN</p>
+                            </div>
+                        </div>
+
+                        <!-- Landlines -->
+                        <div class="space-y-2 mb-5 pt-3 border-t border-slate-800/60">
+                            <span class="text-xs text-slate-500 block font-semibold">الهواتف الأرضية (انقر للاتصال):</span>
+                            <div class="flex flex-wrap gap-2">
+                                <div class="flex items-center gap-1.5 bg-slate-800/40 hover:bg-slate-800 border border-slate-800 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono text-slate-300 transition">
+                                    <i class="fas fa-phone text-slate-500"></i>
+                                    <a href="tel:+963122119211">012-2119211</a>
+                                    <button onclick="copyToClipboard('012-2119211', 'c-hom1')" id="c-hom1" class="mr-2 text-slate-500 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-slate-800/40 hover:bg-slate-800 border border-slate-800 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono text-slate-300 transition">
+                                    <i class="fas fa-phone text-slate-500"></i>
+                                    <a href="tel:+963122711270">012-2711270</a>
+                                    <button onclick="copyToClipboard('012-2711270', 'c-hom2')" id="c-hom2" class="mr-2 text-slate-500 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Connection -->
+                        <div class="pt-3 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-3">
+                            <div>
+                                <span class="text-xs text-slate-500 block font-semibold mb-1">رقم الجوال والواتساب المباشر:</span>
+                                <span class="font-mono text-slate-200 text-sm font-bold bg-slate-800/30 px-3 py-1.5 rounded-lg">+963 952 710 300</span>
+                            </div>
+                            <a href="https://wa.me/963952710300" target="_blank" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl flex items-center gap-2"><i class="fab fa-whatsapp"></i> محادثة واتساب فورية</a>
+                        </div>
+                    </div>
+
+                    <!-- Lebanon -->
+                    <div data-category="intl" class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-[#080c14] border border-slate-800">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 text-xs font-bold text-indigo-400 bg-indigo-500/10 rounded-full">مكتب لبنان - عاليه</span>
+                            <span class="text-xs font-mono text-slate-500">Lebanon - Aley</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300 text-sm mb-5">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-1"></i>
+                            <div>
+                                <p class="font-bold">شارع البيسين</p>
+                                <p class="text-xs text-slate-500 font-mono">Pisine St</p>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Connection -->
+                        <div class="pt-3 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-3">
+                            <div>
+                                <span class="text-xs text-slate-500 block font-semibold mb-1">الرقم والواتساب المباشر:</span>
+                                <span class="font-mono text-slate-200 text-sm font-bold bg-slate-800/30 px-3 py-1.5 rounded-lg">+961 3 492 724</span>
+                            </div>
+                            <a href="https://wa.me/9613492724" target="_blank" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl flex items-center gap-2"><i class="fab fa-whatsapp"></i> محادثة واتساب فورية</a>
+                        </div>
+                    </div>
+
+                    <!-- Bulgaria -->
+                    <div data-category="intl" class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-[#080c14] border border-slate-800">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 text-xs font-bold text-indigo-400 bg-indigo-500/10 rounded-full">مكتب بلغاريا - صوفيا</span>
+                            <span class="text-xs font-mono text-slate-500">Bulgaria - Sofia</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300 text-sm mb-5">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-1"></i>
+                            <div>
+                                <p class="font-bold">سريديتس</p>
+                                <p class="text-xs text-slate-500 font-mono">Sredets</p>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Connection -->
+                        <div class="pt-3 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-3">
+                            <div>
+                                <span class="text-xs text-slate-500 block font-semibold mb-1">الرقم المباشر والواتساب:</span>
+                                <span class="font-mono text-slate-200 text-sm font-bold bg-slate-800/30 px-3 py-1.5 rounded-lg">+49 176 63454715</span>
+                            </div>
+                            <a href="https://wa.me/4917663454715" target="_blank" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl flex items-center gap-2"><i class="fab fa-whatsapp"></i> محادثة واتساب فورية</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Departments & Managers (Right) -->
+                <div data-category="management" class="lg:col-span-4">
+                    <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-800/90 to-slate-950 border-2 border-indigo-500/20 shadow-2xl relative">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                                <i class="fas fa-crown text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-black text-base">مدراء الأقسام والإدارة</h4>
+                                <p class="text-[9px] text-slate-400 uppercase tracking-widest font-mono">Serena Departments</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <!-- Management -->
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-bold text-slate-200">الإدارة العامة</span>
+                                    <span class="text-[8px] text-slate-400 font-mono uppercase">Management</span>
+                                </div>
+                                <div class="flex justify-between items-center gap-2 pt-2 border-t border-slate-800/60">
+                                    <span class="font-mono text-xs text-indigo-300 font-bold">+963 933 471 567</span>
+                                    <div class="flex gap-1.5">
+                                        <button onclick="copyToClipboard('+963933471567', 'c-m1')" id="c-m1" class="p-1.5 rounded bg-slate-800 text-slate-400 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                        <a href="https://wa.me/963933471567" target="_blank" class="p-1.5 rounded bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600 hover:text-white"><i class="fab fa-whatsapp text-xs"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Recruitment & PR -->
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-bold text-slate-200">مدير التوظيف والعلاقات العامة</span>
+                                    <span class="text-[8px] text-slate-400 font-mono uppercase">Recruitment & PR</span>
+                                </div>
+                                <div class="flex justify-between items-center gap-2 pt-2 border-t border-slate-800/60">
+                                    <span class="font-mono text-xs text-indigo-300 font-bold">+963 931 684 145</span>
+                                    <div class="flex gap-1.5">
+                                        <button onclick="copyToClipboard('+963931684145', 'c-m2')" id="c-m2" class="p-1.5 rounded bg-slate-800 text-slate-400 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                        <a href="https://wa.me/963931684145" target="_blank" class="p-1.5 rounded bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600 hover:text-white"><i class="fab fa-whatsapp text-xs"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HR -->
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-bold text-slate-200">مدير الموارد البشرية</span>
+                                    <span class="text-[8px] text-slate-400 font-mono uppercase">HR Manager</span>
+                                </div>
+                                <div class="flex justify-between items-center gap-2 pt-2 border-t border-slate-800/60">
+                                    <span class="font-mono text-xs text-indigo-300 font-bold">+963 982 791 717</span>
+                                    <div class="flex gap-1.5">
+                                        <button onclick="copyToClipboard('+963982791717', 'c-m3')" id="c-m3" class="p-1.5 rounded bg-slate-800 text-slate-400 hover:text-white"><i class="fas fa-copy text-xs"></i></button>
+                                        <a href="https://wa.me/963982791717" target="_blank" class="p-1.5 rounded bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600 hover:text-white"><i class="fab fa-whatsapp text-xs"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email and Website Info -->
+                        <div class="mt-6 pt-5 border-t border-slate-800/80 space-y-3">
+                            <div class="flex items-center gap-3 text-slate-300 text-sm">
+                                <i class="fas fa-envelope text-blue-400 shrink-0"></i>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-semibold">البريد الإلكتروني المعتمد:</p>
+                                    <a href="mailto:latakia@serena-sy.com" class="hover:text-blue-400 hover:underline text-xs font-mono">latakia@serena-sy.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300 text-sm">
+                                <i class="fas fa-globe text-indigo-400 shrink-0"></i>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-semibold">الموقع الرسمي:</p>
+                                    <a href="https://serena-sy.com" target="_blank" class="hover:text-indigo-400 hover:underline text-xs font-mono">serena-sy.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Social Media Hub -->
+            <div class="mt-16 pt-12 border-t border-slate-900 text-center">
+                <h3 class="text-xl font-bold text-white mb-6">تابع مجتمعاتنا وقنواتنا الرسمية</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="https://www.facebook.com/profile.php?id=61577240213275" target="_blank" class="px-5 py-3 bg-slate-900 hover:bg-blue-600 border border-slate-800 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition transform hover:scale-105">فيسبوك سوريا 🇸🇾</a>
+                    <a href="https://www.facebook.com/profile.php?id=61576853063342" target="_blank" class="px-5 py-3 bg-slate-900 hover:bg-blue-600 border border-slate-800 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition transform hover:scale-105">فيسبوك لبنان 🇱🇧</a>
+                    <a href="https://www.instagram.com/serena_employment_agency/" target="_blank" class="px-5 py-3 bg-slate-900 hover:bg-pink-600 border border-slate-800 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition transform hover:scale-105">انستغرام 📸</a>
+                    <a href="https://www.linkedin.com/company/serena-employment-agency" target="_blank" class="px-5 py-3 bg-slate-900 hover:bg-blue-700 border border-slate-800 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition transform hover:scale-105">لينكد إن 💼</a>
+                    <a href="https://whatsapp.com/channel/0029Vb6bHoHFi8xV5nMaPr43" target="_blank" class="px-5 py-3 bg-slate-900 hover:bg-green-600 border border-slate-800 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition transform hover:scale-105">قناة واتساب سوريا 🇸🇾</a>
+                    <a href="https://whatsapp.com/channel/0029Vb7HzDyB4hdOUQ1vKy00" target="_blank" class="px-5 py-3 bg-slate-900 hover:bg-green-600 border border-slate-800 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition transform hover:scale-105">قناة واتساب لبنان 🇱🇧</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-slate-950 border-t border-slate-900 text-slate-500 py-12">
+        <div class="container mx-auto px-4 text-center sm:flex sm:justify-between sm:text-right">
+            <div>
+                <p class="text-sm font-bold text-slate-300">© 2024 وكالة سيرينا للتوظيف والاستثمار.</p>
+                <p class="text-xs text-slate-500 mt-1">جميع الحقوق محفوظة لمجموعة سيرينا الاستثمارية.</p>
+            </div>
+            <div class="flex gap-6 justify-center mt-4 sm:mt-0 text-xs font-semibold">
+                <a href="#about" class="hover:text-slate-300">عن سيرينا</a>
+                <a href="#services" class="hover:text-slate-300">خدماتنا</a>
+                <a href="#contact" class="hover:text-slate-300">اتصل بنا</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== JAVASCRIPT FOR REAL-TIME INTERACTION ====== -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tab category filtering
+        const tabs = document.querySelectorAll('[data-tab]');
+        const officeCards = document.querySelectorAll('[data-category]');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Reset tab styles
+                tabs.forEach(t => {
+                    t.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/20');
+                    t.classList.add('bg-slate-900', 'text-slate-400', 'border', 'border-slate-800');
+                });
+
+                // Apply active style
+                tab.classList.add('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/20');
+                tab.classList.remove('bg-slate-900', 'text-slate-400', 'border', 'border-slate-800');
+
+                const target = tab.getAttribute('data-tab');
+
+                officeCards.forEach(card => {
+                    if (target === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        if (card.getAttribute('data-category') === target) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+
+        // Clipboard copy with feedback toast
+        function copyToClipboard(text, id) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById(id);
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check text-emerald-400"></i>';
+                
+                const toast = document.createElement('div');
+                toast.className = "fixed bottom-5 left-5 bg-emerald-600 text-white px-4 py-2.5 rounded-xl shadow-xl font-bold text-sm z-50 transition-all duration-300";
+                toast.innerText = "تم نسخ الرقم: " + text;
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    toast.remove();
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy', err);
+            });
+        }
+    </script>
+</body>
+</html>
